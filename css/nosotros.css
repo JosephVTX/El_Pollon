@@ -4,17 +4,18 @@
     align-items: center;
     justify-content: center;
     gap: 4rem;
-    height: max-content;
+ 
 }
 
 .section__historia h2{
 
     text-align: center;
+    font-size: 1.8rem;
 }
 
 .section__historia p{
 
-    max-width: 400px;
+    max-width: 600px;
     text-align: justify;
 }
 
