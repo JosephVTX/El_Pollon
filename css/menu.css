@@ -58,6 +58,7 @@ p {
     line-height: 1.8;
 }
 .producto {
+    border-radius: .4rem;
     width: 250px;
     height: 350px;
     box-shadow: 0 2px rgba(0, 0, 0, 0.2);

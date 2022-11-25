@@ -111,11 +111,6 @@
   margin-bottom: 1rem;
 }
 
-.hide {
-  overflow: hidden;
-  max-height: 0;
-}
-
 .footer__menu {
   display: flex;
   align-items: center;
@@ -186,6 +181,8 @@
 }
 
 @media screen and (max-width: 900px) {
+  
+
   .section__cards {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -196,6 +193,14 @@
 }
 
 @media screen and (max-width: 840px) {
+
+  .hide{
+
+    overflow: hidden;
+    max-height: 0;
+  }
+ 
+
   .footer__menu {
     flex-direction: column;
     height: max-content;

@@ -8,17 +8,24 @@
     text-align: center;
 }
 
-.caja {
+.main{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    gap: 1rem 0;
+}
+
+.main__caja {
     width: 350px;
     height: 250px;
     box-shadow: 0 2px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    margin: 20px;
+    border-radius: 1rem;
+   
     text-align: left;
     transition: all 0.25s;
     background-color: #E2AC26;
-   
-    float: left;
+  
     
 }
 
@@ -53,5 +60,24 @@
     font-weight: 200;
     margin-left: 20px;
     color: rgb(95, 93, 93);
+}
+
+
+
+
+@media screen and (max-width: 1130px) {
+
+    .main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+@media screen and (max-width: 750px) {
+
+    .main {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
 }
 
