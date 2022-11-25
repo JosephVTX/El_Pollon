@@ -182,7 +182,10 @@ p {
     height: 140px;
     width: 250px;
 }
+#contadorCarrito{
 
+    margin-left: 10px;
+}
 @media(max-width: 1170px){
 
     #contenedor-productos{

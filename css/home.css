@@ -5,20 +5,23 @@
   --color-secondary: #fec503;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  border: none;
-  list-style: none;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-}
+
 
 #btnMenu {
   display: none;
 }
 
+.menu__item--active::after {
+  content: "";
+  height: 4px;
+  background: var(--color-secondary);
+  position: absolute;
+  width: 100%;
+  bottom: 5px;
+  border-radius: 100vh;
+  animation: item-active 0.5s ease-in-out;
+  left: 0;
+}
 .nav {
   display: flex;
 
@@ -54,12 +57,13 @@
   justify-content: center;
   width: 100%;
   background: var(--color-primary);
-  max-height: 235px;
+  max-height: 300px;
   overflow: hidden;
   transition: all 600ms;
 }
 
 .menu__item {
+  position: relative;
   display: block;
 
   padding: 10px 20px;
@@ -170,6 +174,15 @@
 .section__favoritos-plato img {
   border-radius: 1rem;
 }
+
+@keyframes item-active {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 1250px) {
   .section__cards {
     grid-template-columns: repeat(2, 1fr);
@@ -181,8 +194,6 @@
 }
 
 @media screen and (max-width: 900px) {
-  
-
   .section__cards {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -193,13 +204,10 @@
 }
 
 @media screen and (max-width: 840px) {
-
-  .hide{
-
+  .hide {
     overflow: hidden;
     max-height: 0;
   }
- 
 
   .footer__menu {
     flex-direction: column;
